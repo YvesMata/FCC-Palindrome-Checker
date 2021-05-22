@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+  	<meta name="author" content="YM">
+
+	<title>Palindrome Checker</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css"> <!-- calls css styling -->
+</head>
+<body>
+	<!-- HTML Code uses semantic tags to properly define elements -->
+	<main id="showcase"> <!-- main container for the entire site -->
+		<div id="main-container"> <!-- contains the input form and the results into one element -->
+			<h1 id="header-text">Palindrome Checker</h1>
+
+			<section id="word-input"> <!-- contains the input area and submit button into one element -->
+				<form id="word-input-form">
+					<input type="text" placeholder="Input word or sentence here..." name="word-input-form-text" autocomplete="off" id="word-input-form-text"> <!-- defines the input area element, placeholder for user-friendly definition and autocomplete off to prevent saving of previous entries-->
+					 <button type="submit" id="word-input-form-submit">Is this a palindrome?</button> <!-- defines the button element, type submit submits the form-->
+				</form>
+			</section>
+
+			<div id="input-result"> <!-- contains the results into one container -->
+				<h1 id="palindrome-true">Yep, it's a palindrome!</h1>
+				<h1 id="palindrome-false">Nope, not a palindrome...</h1>
+			</div>
+		</div>
+
+		<div id="details-section"> <!-- contains the definition and footer sections into one element -->
+			<section id="definition"> <!-- definiton section element-->
+				<div id="text-container"> <!-- contains all the text inside into one element -->
+					<h1 class="define-header">What is this?</h1>
+					<p class="define-text">This site checks if a word, phrase, or a sentence is a palindrome.</p>
+					<h1 class="define-header">But what is a palindrome?</h1>
+					<p class="define-text">They're words, phrases, or sentences that reads the same backward as forward. For example, 'madam' and 'nurses run' are palindromes, while the word 'palindrome' itself isn't (ironic isn't it?). Palindromes also generally only count alphanumeric characters, so the sentence 'Mr. Owl ate my metal worm.' will still count as a palindrome despite not necessarily being the same backwards because of the period in the word 'Mr.'. Basically, as long as the letters or numbers match when read or written forwards and backwards, it's a palindrome!</p>
+				</div>
+			</section>
+
+			<footer id="footer"> <!-- footer element -->
+				<p>Palindrome Checker &copy; 2021</p>
+			</footer>
+		</div>
+		
+	</main>
+
+	<script type="text/javascript" src="./js/main.js"></script> <!-- calls the script -->
+</body>
+</html>

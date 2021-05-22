@@ -1,0 +1,161 @@
+/* GLOBALS */
+* {
+	margin: 0;
+	padding: 0;
+	/* resets the website margins/paddings */
+}
+
+body {
+	background: #3FEEE6;
+	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	color: #FC4445;
+}
+
+/* MAIN */
+#showcase {
+	height: 100vh; /* fits the entire site to the viewport height of the user */
+}
+
+/* BOX 1 CONTAINER */
+#main-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center; /* lines 21-24 centers the contents of the container vertically and horizontally, 
+	while displaying them from top to bottom */
+	box-sizing: border-box; /* negates the effects of paddings and margins to overall height */
+	padding: 20px 0 20px 0; /* paddings to make the element have a top and bottom spacing on smaller screens */
+	min-height: calc(100vh - 350px); /* this makes the height responsive relative to the viewport height and the fixed height 
+	for the bottom sections */
+}
+
+/* Header */
+#header-text {
+	text-align: center;
+}
+
+/* Input Box */
+#word-input-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center; /* same as lines 21-24 */
+}
+
+#word-input-form-text {
+	font-size: 18px;
+	height: 50px;
+	width: 630px;
+	margin-top: 20px;
+	padding-left: 20px;
+	border: 2px solid #FC4445;
+	border-radius: 25px;
+}
+
+#word-input-form-text:focus{
+	outline: none; /* disables the default outline shown when the textbox is active */
+	border: 2px solid #ff9f7a;
+    border-radius: 25px;
+}
+
+#word-input-form-submit {
+	background: #f02627;
+	color: white;
+	font-size: 18px;
+	height: 50px;
+	width: 250px;
+	margin-top: 20px;
+	border: 2px solid #FC4445;
+	border-radius: 25px;
+	transition: background-color 500ms linear; /* smoothly transitions the background color to another one on hover 
+	instead of instantly changing */
+}
+
+#word-input-form-submit:hover {
+	background: #FC4445;
+}
+
+/* Result */
+#input-result {
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	height: 30px;
+	width: 400px;
+}
+
+#palindrome-true {
+	font-size: 30px;
+	color: #1bb300;
+}
+
+#palindrome-false {
+	font-size: 30px;
+	color: #f01617;
+}
+
+/* BOX 2 CONTAINER */
+
+#details-section {
+	height: 350px; /* sets a fixed height for the bottom section that the upper section can respond to */
+}
+
+/* Definition Area */
+#definition {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center; /* same as lines 21-24 */
+	background: #FC4445;
+	color: white;
+	min-height: 280px; /* sets a custom height for the definition section. min-height is set to avoid overlapping */
+	width: 100%;
+}
+
+#text-container {
+	width: 80%;
+	margin: 20px 0 20px 0;
+}
+
+.define-header {
+	font-size: 20px;
+}
+
+.define-text {
+	font-size: 18px;
+	line-height: 1.6;
+	text-align: justify;
+  	text-justify: inter-word; /* lines 124-125 justifies text */
+}
+
+/* BOX 3 CONTAINER */
+/* Footer */
+#footer {
+	display: flex;
+	align-items: center;
+	justify-content: center; /* same as lines 21-24 */
+	background: #f02627;
+	color: white;
+	min-height: 70px; /* sets a custom height for the footer section. min-height set to avoid overlapping. 
+	notice that the min-height of footer section + definition section = 350px which is the container height. 
+	anything less will not fill the screen properly, anything more might cause overlapping issues */
+	width: 100%;	
+}
+
+#footer p {
+	text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+	#word-input-form-text {
+		width: 550px; /* adjusts width of text box for tablet screens */
+	}
+}
+
+@media (max-width: 576px) {
+	#word-input-form-text {
+		width: 400px; /* adjusts width of text box for mobile screen */
+	}
+}
+
